@@ -52,17 +52,17 @@ class TagCreateView(generic.CreateView):
     model = Tag
     fields = "__all__"
     template_name = "task/tag_form.html"
-    success_url = reverse_lazy("tag:tag-list")
+    success_url = reverse_lazy("task:tag-list")
 
 
 class TagUpdateView(generic.UpdateView):
     model = Tag
     fields = "__all__"
     template_name = "task/tag_form.html"
-    success_url = reverse_lazy("tag:tag-list")
+    success_url = reverse_lazy("task:tag-list")
 
 
 class TagDeleteView(generic.DeleteView):
     model = Tag
     template_name = "task/tag_delete.html"
-    success_url = reverse_lazy("tag:tag-list")
+    success_url = reverse_lazy("task:tag-list")
