@@ -45,24 +45,24 @@ class TagListView(generic.ListView):
     model = Tag
     queryset = Tag.objects.all()
     context_object_name = "tag_list"
-    template_name = "tag/tag_list.html"
+    template_name = "task/tag_list.html"
 
 
 class TagCreateView(generic.CreateView):
     model = Tag
     fields = "__all__"
-    template_name = "tag/tag_form.html"
+    template_name = "task/tag_form.html"
     success_url = reverse_lazy("tag:tag-list")
 
 
 class TagUpdateView(generic.UpdateView):
     model = Tag
     fields = "__all__"
-    template_name = "tag/tag_form.html"
+    template_name = "task/tag_form.html"
     success_url = reverse_lazy("tag:tag-list")
 
 
 class TagDeleteView(generic.DeleteView):
     model = Tag
-    template_name = "tag/tag_delete.html"
+    template_name = "task/tag_delete.html"
     success_url = reverse_lazy("tag:tag-list")
